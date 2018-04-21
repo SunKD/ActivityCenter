@@ -1,0 +1,11 @@
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\bin\Debug\netcoreapp2.0\ActivityCenter.deps.json
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\bin\Debug\netcoreapp2.0\ActivityCenter.runtimeconfig.json
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\bin\Debug\netcoreapp2.0\ActivityCenter.runtimeconfig.dev.json
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\bin\Debug\netcoreapp2.0\ActivityCenter.dll
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\bin\Debug\netcoreapp2.0\ActivityCenter.pdb
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\obj\Debug\netcoreapp2.0\ActivityCenter.csprojResolveAssemblyReference.cache
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\obj\Debug\netcoreapp2.0\ActivityCenter.csproj.CoreCompileInputs.cache
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\obj\Debug\netcoreapp2.0\ActivityCenter.AssemblyInfoInputs.cache
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\obj\Debug\netcoreapp2.0\ActivityCenter.AssemblyInfo.cs
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\obj\Debug\netcoreapp2.0\ActivityCenter.dll
+C:\Users\SunDa\Desktop\desktop2018\DojoAssignments\c#\BeltExam\ActivityCenter\obj\Debug\netcoreapp2.0\ActivityCenter.pdb

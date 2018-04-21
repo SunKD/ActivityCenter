@@ -1,0 +1,70 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@model IEnumerable<ActivityCenter.Models.DojoActivity>;
+<div class="row">
+    <span>@ViewBag.Error</span>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h1>Dojo Activity Center</h1>
+    </div>
+    <div class="col-md-3"></div>
+    <div class="col-md-2">
+        <h4>Welcome @ViewBag.CurUserName!</h4>
+    </div>
+    <div class="col-md-1">
+        <a href="Logout">Log off</a>
+    </div>
+</div>
+
+<table class="table table-striped text-center">
+    <thead>
+        <tr>
+            <th class="text-center">Activity</th>
+            <th class="text-center">Date and Time</th>
+            <th class="text-center">Duration</th>
+            <th class="text-center">Event Coordinator</th>
+            <th class="text-center">Number of Participants</th>
+            <th class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach(var item in @Model){
+                <tr>
+                    <td><a href="ShowActivity/@item.DojoActivityID">@item.Title</a></td>
+                    <td>@item.ActivityDate.ToString("MM/dd") &#64;
+                    @item.ActivityTime.ToString("t")</td>
+                    <td>@item.Duration</td>
+                    <td>@item.Creator.FirstName</td>
+                    <td>@item.Participants.Count</td>
+                    <form action="processRsvp" method="POST">
+                    <input type="hidden" value="@item.DojoActivityID" name="ActivityID">
+                        @if(@ViewBag.Loggedin == item.CreatorID) {
+                            <td><input type="submit" value="Delete" class="btn-link" name="rsvpAction"></td>
+                        } else if(@item.Participants.Count == 0) {
+                            <td><input type="submit" value="Join" class="btn-link" name="rsvpAction"></td>
+                        } else {
+                            bool userIn = false;
+                            foreach(var aa in item.Participants) {
+                                if(@ViewBag.Loggedin == aa.UserID) {
+                                    <td><input type="submit" value="Leave" class="btn-link" name="rsvpAction"></td>
+                                    userIn = true;
+                                    break;
+                                }
+                            }
+                            if(!userIn){
+                                <td><input type="submit" value="Join" class="btn-link" name="rsvpAction"></td>   
+                            }
+                        }
+                    </form>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+<div class="row text-right">
+    <a href="New">Add New Activity!</a>
+</div>

@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "New";
+}
+
+@model ActivityCenter.Models.ActivityViewModel;
+
+<div class="row">
+    <div class="col-md-6">
+        <h1>Dojo Activity Center</h1>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-1">
+        <a href="/Dashboard">Home</a>
+    </div>
+    <div class="col-md-1">
+        <a href="Logout">Log off</a>
+    </div>
+</div>
+
+<div class="row">
+    <h1>Create an Activity!</h1>
+    <form asp-controller="Activity" asp-action="AddNew" method="POST" class="form-group">
+            <h1>Register</h1>
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title"></span>
+
+            <label asp-for="ActivityTime"></label>
+            <input type="time"asp-for="ActivityTime" class="form-control">
+            <span asp-validation-for="ActivityTime"></span>
+
+            <label asp-for="ActivityDate"></label>
+            <input type="date" asp-for="ActivityDate" class="form-control"> 
+            <span asp-validation-for="ActivityDate"></span>
+
+            <label asp-for="Duration"></label>
+            <input asp-for="Duration" class="form-control">
+            <span asp-validation-for="Duration"></span>
+
+            <select name="unit">
+                <option value="Days">Days</option>
+                <option value="Hours">Hours</option>
+                <option value="Minutes">Minutes</option>
+            </select>
+            
+            <label asp-for="Description"></label>
+            <input asp-for="Description" class="form-control"> 
+            <span asp-validation-for="Description"></span>
+
+            <br>
+            <button type="submit" class="btn btn-info">Create Activity</button>
+        </form>
+</div>

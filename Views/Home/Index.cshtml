@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Registration";
+}
+@{
+    ViewData["Title"] = "Login";
+}
+@model ActivityCenter.Models.RegisterViewModel;
+
+<div class="row">
+    <span>@ViewBag.Error </span>
+</div>
+        
+<div class="row">
+    <div class="col-md-6">
+        <form action="LoggingIn" method="POST" class="form-group">
+            <h1>Login</h1>
+            Email: <input type="email" name="loginemail" class="form-control"> 
+            Password: <input type="password" name="loginpw" class="form-control">
+            <br>
+            <input type="submit" name="login" value="Login" class="btn btn-info form-control">
+        </form>
+    </div>
+</div>
+<div class="row">
+    <h1 class="col-md-6">Register</h1>
+</div>
+    <div class="row">
+        <div class="col-md-6">
+        <form asp-controller="Home" asp-action="Register" method="POST" class="form-group">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" class="form-control">
+            <span asp-validation-for="FirstName"></span>
+
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" class="form-control">
+            <span asp-validation-for="LastName"></span>
+
+            <label asp-for="Email"></label>
+            <input asp-for="Email" class="form-control"> 
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" class="form-control"> 
+            <span asp-validation-for="Password"></span>
+
+            <label asp-for="ConfirmedPW"></label>
+            <input asp-for="ConfirmedPW" class="form-control">
+            <span asp-validation-for="ConfirmedPW"></span>
+            <br>
+            <button type="submit" class="btn btn-info form-control">Create new User</button>
+        </form>
+        <div>
+    </div>
+       
+    </div>
+</div>
